@@ -64,7 +64,7 @@ if (isset($_SESSION['banco']) && !empty($_SESSION['banco'])) {
 
 		if($sql->rowCount() > 0) {
 			foreach($sql->fetchAll() as $item):
-            ?>
+			?>
 				<tr>
 					<td><?php echo date('d/m/Y H:i', strtotime($item['dataoperacao'])); ?></td>
 					<td><?php echo ($item['tipo'] == 0)? '<font color="green">+R$'.$item['valor'].'</font>' : '<font color="red">-R$'.$item['valor'].'</font>' ?></td>
